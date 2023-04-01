@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    background-color: #0d0d0d;
+}
+
+/* Navigation Bar */
+
+header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    padding: 2vh 10vw;
+}
+
+header * {
+    cursor: pointer;
+}
+
+header span {
+    font-size: 24px;
+}
+
+header span, header button {
+    font-family: 'Prata', serif;
+}
+
+header span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+}
+
+header figure {
+    display: none;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header ul li:hover {
+    color: grey;
+}
+
+header button, .contact-me button {
+    width: 130px;
+    height: 40px;
+    color: #252525;
+    background-color: #fdfd45;
+    margin-left: auto;
+}
+
+.content {
+    padding: 0vh 10vw;
+}
+
+h1 {
+    max-width: 600px;
+    font-size: 46px;
+    font-weight: 100;
+    font-family: 'Prata', serif;
+    margin-top: 60px;
+}
+
+p {
+    max-width: 460px;
+    color: grey;
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 24px;
+}
+
+/* Logos */
+.logos {
+    width: 100%;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto; 
+    grid-template-rows: auto;
+    column-gap: 5vw;
+}
+
+/* Testimonials */
+.testimonials {
+    display: grid;
+    /* place-items: center; */
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    gap: 0vw;
+    padding: 0 0vw;
+}
+
+.testimonials div:nth-child(1) {
+    margin-right: auto;
+}
+
+.testimonials div:nth-child(2) {
+    margin-left: auto;
+}
+
+.testimonials div img {
+    width: 95%;
+}
+
+.testimonials h1 {
+    max-width: 400px;
+    margin-top: 15px;
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+.testimonials div p {
+    max-width: 70%;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* About */
+
+.about {
+    background-color: #40444e;
+    padding: 1vh 10vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+
+.about div {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.about div p {
+    font-size: 16px;
+    color: #bababa;
+    line-height: 24px;
+}
+
+.about div:nth-child(1) p {
+    width: 65%;
+}
+
+.about div:nth-child(2) p {
+    width: 80%;
+}
+
+.about h1 {
+    font-size: 34px;
+    width: 75%;
+}
+
+/* Contact Me */
+
+.contact-me {
+    padding: 2vh 10vw;
+}
+
+.contact-me h1 {
+    font-size: 34px;
+}
+
+.contact-me p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.contact-me button {
+    width: 160px;
+    height: 50px;
+    margin-left: 0;
+    font-weight: 600;
+    font-family: 'Prata', serif;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #40444e;
+    padding: 0 10vw;
+}
+
+footer span {
+    font-size: 18px;
+    font-family: 'Prata', serif;
+}
+
+footer ul {
+    display: flex;
+    gap: 2vw;
+}
+
+.open {
+    display: flex;
+}
+
+/* For Tablets */
+@media screen and (max-width: 800px) {
+
+    html, body {
+        padding: 2vh 0;
+    }
+
+    header ul, header button {
+        display: none;
+    }
+
+    header ul {
+        margin-top: 10px;    
+    }
+
+    header ul li{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    header {
+        grid-template-columns: 50% 50%;
+    }
+
+    header figure {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    h1 {
+        max-width: 100%;
+    }
+
+    .logos {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        row-gap: 20px;
+    }
+
+    .testimonials {
+        width: 100%;
+        place-items: center;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        gap: 50px;
+    }
+
+    .testimonials img {
+        width: 100%;
+    }
+
+    .testimonials div {
+        width: 100%;
+        /* background-color: red; */
+    }
+    
+    .testimonials div p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .about {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto ;
+        gap: 40px;
+        padding: 0 80px;
+    }
+
+    .about div {
+        width: 100%;
+    }
+
+    .about div h1 {
+        width: 100%;
+    }
+
+    .about div:nth-child(1) p, .about div:nth-child(2) p {
+        width: 100%;
+        max-width: 95%;
+        margin-top: 10px;
+    }
+}
